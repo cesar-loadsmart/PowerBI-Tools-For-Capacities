@@ -168,7 +168,7 @@ if ( $response -eq 'y' )
         $loopCounter = [int]$item.SessionsToRun
         while($loopCounter -gt 0)
         {       
-            start chrome "--new-window $($item.ConfiguredReportPath)"            
+            Start-Process -NoNewWindow "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" -ArgumentList "--new-window $($item.ConfiguredReportPath)"          
             --$loopCounter
         }
     }

@@ -1,0 +1,28 @@
+reportParameters= {
+  "reportUrl": "https://app.powerbi.com/reportEmbed?reportId=b933876a-5b14-498d-93e9-f3565fe14fdd&groupId=8e1061f1-0a33-4719-9325-f0942cfa0108&w=2&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLUNFTlRSQUwtQi1QUklNQVJZLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0IiwiZW1iZWRGZWF0dXJlcyI6eyJ1c2FnZU1ldHJpY3NWTmV4dCI6dHJ1ZX19",
+  "pageName": "ReportSection5dcec281dec2be214ae6",
+  "sessionRestart": 100,
+  "thinkTimeSeconds": 20,
+  "filters": [
+	{
+		"filterTable":"Load",
+		"filterColumn":"Load State",
+		"isSlicer":false,
+		"filtersList":["All","at-delivery","at-pickup","booked","sourced","en-route-delivery"]
+	},
+	{
+		"filterTable":"Transportation Mode",
+		"filterColumn":"Transportation Mode",
+		"isSlicer":false,
+		"filtersList":["FCL","FTL","LTL","PTL","RAIL","VLTL"]
+	},
+	{
+		"filterTable":"Load",
+		"filterColumn":"Load Direction",
+		"isSlicer":false,
+		"filtersList":["Inbound","Outbond","Inboud - RAW","ALL","(Blank)","Outbound - CAN"]
+	},
+  ]
+};
+
+//see DemoLoadTest1/PBIReport.JSON and DemoLoadTest2/PBIReport.JSON for examples of how to define which page it should show, which bookmarks to click through, which filters and slicers to select

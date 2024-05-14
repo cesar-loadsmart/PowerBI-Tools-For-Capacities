@@ -13,7 +13,7 @@ $htmlFileName = 'RealisticLoadTest.html'
 $workingDir = $pwd.Path
 "This script finds all subdirectories with $htmlFileName files and runs a specifies number of instances of each."
 $instances = [int] $(Read-Host -Prompt 'Enter number of instances to initiate for each report')
-$numberOfPhysicalCores = (Get-WmiObject –class Win32_processor).NumberOfCores;
+$numberOfPhysicalCores = 18;
 if ($numberOfPhysicalCores.Length)
 {
     #if computer has multiple sockets, then sum the array
@@ -58,7 +58,8 @@ foreach ($destinationDir in $directories)
         while($loopCounter -gt 0)
         {
         $reportHtmlFile
-            start chrome "--user-data-dir=""ChromeProfiles\Profile$profile"" --disable-default-apps --new-window ""$($reportHtmlFile)"""            
+            #start chrome "--user-data-dir=""ChromeProfiles\Profile$profile"" --disable-default-apps --new-window ""$($reportHtmlFile)"""            
+            Start-Process -NoNewWindow "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" -ArgumentList "--new-window $($reportHtmlFile)"   
             --$loopCounter
             $profile = ($profile+1) % $numberOfPhysicalCores;
             sleep -Seconds 5

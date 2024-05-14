@@ -1,0 +1,16 @@
+reportParameters= {
+  "reportUrl": "https://app.powerbi.com/reportEmbed?reportId=1ed2d571-4962-462e-9856-ee8738f4c08b&groupId=8e1061f1-0a33-4719-9325-f0942cfa0108&w=2&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLUNFTlRSQUwtQi1QUklNQVJZLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0IiwiZW1iZWRGZWF0dXJlcyI6eyJ1c2FnZU1ldHJpY3NWTmV4dCI6dHJ1ZX19",
+  "pageName": "ReportSectionc4872804c57ab701525c",
+  "sessionRestart": 100,
+  "thinkTimeSeconds": 1,
+  "filters": [
+		{
+			"filterTable":"Warehouse",
+			"filterColumn":"Warehouse Organization",
+			"isSlicer":false,
+			"filtersList":["All","Delorean Squad","Westrac","(Blank)","Pulsar 46"]
+		},
+  ]
+};
+
+//see DemoLoadTest1/PBIReport.JSON and DemoLoadTest2/PBIReport.JSON for examples of how to define which page it should show, which bookmarks to click through, which filters and slicers to select
